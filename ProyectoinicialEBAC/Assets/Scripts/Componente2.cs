@@ -4,27 +4,12 @@ using UnityEngine;
 
 public class Componente2 : MonoBehaviour
 {
-    private void Awake()
-    {
-        
-    }
+  
     private void FixedUpdate()
-    {
-        // Cambiar el color 
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
+    {        
+        Color c = new Color(Random.value, Random.value, Random.value);
+        GetComponent<MeshRenderer>().material.color =  c;
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log(Componente1.miObjeto.name);
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
+  
+    
 }
